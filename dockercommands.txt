@@ -2,3 +2,4 @@ docker run --name conv-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=c
 
 docker exec -it conv-mysql mysql -u root -p
 
+docker build -f dockerfile -t customerapp .
