@@ -1,0 +1,13 @@
+minikube stop
+minikube delete
+minikube start --nodes 4 -p multinode-demo
+kubectl get nodes
+minikube status -p multinode-demo
+kubectl apply -f mysql-deployment.yaml
+kubectl get pods
+kubectl rollout status deployment/mysql-app
+kubectl get pods -o wide
+kubectl scale --replicas=3 deploy mysql-app
+minikube service list -p multinode-demo
+
+
